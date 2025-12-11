@@ -70,7 +70,7 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: webapprouting.kubernetes.azure.com
   hosts:
-    - host: fibo-express.<인그레스 컨트롤러 External IP>.nip.io
+    - host: fibo-express.127.0.0.1.nip.io
       paths:
         - path: /
           pathType: Prefix
