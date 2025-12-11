@@ -66,11 +66,11 @@ service:
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
   enabled: true
-  className: webapprouting.kubernetes.azure.com
+  className: ingress-nginx
   annotations:
-    kubernetes.io/ingress.class: webapprouting.kubernetes.azure.com
+    kubernetes.io/ingress.class: ingress-nginx
   hosts:
-    - host: fibo-django.127.0.0.1.nip.io
+    - host: fibo-django.localhost.nip.io
       paths:
         - path: /
           pathType: Prefix
