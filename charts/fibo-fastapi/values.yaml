@@ -70,7 +70,7 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: ingress-nginx
   hosts:
-    - host: fibo-fastapi.localhost.nip.io
+    - host: fibo-fastapi.127.0.0.1.nip.io
       paths:
         - path: /
           pathType: Prefix

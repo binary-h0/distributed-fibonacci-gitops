@@ -71,7 +71,7 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: ingress-nginx
   hosts:
-    - host: fibo-next.localhost.nip.io
+    - host: fibo-next.127.0.0.1.nip.io
       paths:
         - path: /
           pathType: Prefix
