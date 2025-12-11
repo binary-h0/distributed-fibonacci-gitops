@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fibo-django
+  namespace: argocd
+spec:
+  project: distributed-fibonacci
+  source:
+    repoURL: https://github.com/binary-h0/distributed-fibonacci-gitops.git
+    targetRevision: HEAD
+    path: charts/fibo-django
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
